@@ -35,8 +35,6 @@
   press Esc and :wq -> to save changes in file.
   echo $PATH
   echo $JAVA_HOME
-  echo $PATH
-  echo $JAVA_HOME
   exit
   sudo su -
   echo $JAVA_HOME
