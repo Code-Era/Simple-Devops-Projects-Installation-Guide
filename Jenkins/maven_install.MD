@@ -9,7 +9,7 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 1. Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. In this case, I am using /opt/maven as my installation directory
  - Link : https://maven.apache.org/download.cgi
     ```sh
-     # Creating maven directory under /opt
+     # Creating maven directory under /opt 
      mkdir /opt/maven
      cd /opt/maven
      # downloading maven version 3.6.0
@@ -19,6 +19,19 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 	
 1. Setup M2_HOME and M2 paths in .bash_profile of the user and add these to the path variable
    ```sh
+  **** [root@jenkins opt]# ls
+   apache-maven-3.6.3  apache-maven-3.6.3-bin.tar.gz  aws
+	[root@jenkins opt]# mv apache-maven-3.6.3 maven
+	[root@jenkins opt]# cd /maven
+	-bash: cd: /maven: No such file or directory
+	[root@jenkins opt]#  mkdir /opt/maven
+	mkdir: cannot create directory ‘/opt/maven’: File exists
+	[root@jenkins opt]# cd maven/
+	[root@jenkins maven]# pwd
+	/opt/mavenb --> This will be environment setup.
+	[root@jenkins maven]# ls
+  ******bin  boot  conf  lib  LICENSE  NOTICE  README.txt  **Amit
+
    vi ~/.bash_profile
    M2_HOME=/opt/maven/apache-maven-3.6.1
    M2=$M2_HOME/bin
