@@ -17,9 +17,8 @@ Maven is a code build tool which used to convert your code to an artifact. this 
      tar -xvzf apache-maven-3.6.1-bin.tar.gz
      ```
 	
-1. Setup M2_HOME and M2 paths in .bash_profile of the user and add these to the path variable
-   ```sh
-  [root@jenkins opt]# ls
+	```sh
+	[root@jenkins opt]# ls
    apache-maven-3.6.3  apache-maven-3.6.3-bin.tar.gz  aws
 	[root@jenkins opt]# mv apache-maven-3.6.3 maven
 	[root@jenkins opt]# cd /maven
@@ -31,7 +30,11 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 	/opt/mavenb --> This will be environment setup.
 	[root@jenkins maven]# ls
        bin  boot  conf  lib  LICENSE  NOTICE  README.txt  --> by Amit
-
+       ```
+	
+	
+1. Setup M2_HOME and M2 paths in .bash_profile of the user and add these to the path variable
+   ```sh
    vi ~/.bash_profile
    M2_HOME=/opt/maven/apache-maven-3.6.1
    M2=$M2_HOME/bin
