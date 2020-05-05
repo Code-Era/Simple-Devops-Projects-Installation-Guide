@@ -1,4 +1,4 @@
-# Steps to set JAVA enviroment variable on Amazon Linux in 4 simple steps.
+# Steps to set JAVA enviroment variable on Amazon Linux .
 
 
 ### Steps 
