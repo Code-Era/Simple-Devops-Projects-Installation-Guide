@@ -34,9 +34,9 @@
   sudo nano .batch_profile or vi .bash_profile -> to edit the file
   press Esc and :wq -> to save changes in file.
   echo $PATH
-  echo $JAVA_HOME
-  exit
-  sudo su -
+  echo $JAVA_HOME -> show nothing , you must have logout first.
+  exit -> logout
+  sudo su -  -> You have agin login as root 
   echo $JAVA_HOME
 
   
