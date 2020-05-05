@@ -23,22 +23,22 @@
  
 ### Command 
    ```sh
-  1. pwd -> Present work direcotry
-   2. sudo su-
-   cd ~  ->go to root
-  118  clear -> clear screen
-  120  ls -la -> print all bash profile file
-       file $(which java) -> check java location
-  130  /etc/alternatives/java -> copy this
-  135  file /etc/alternatives/java -> give exact java location and copty that.
-  121  sudo nano .batch_profile or vi .bash_profile -> to edit the file
-  122  press Esc and :wq -> to save changes in file.
-  123  echo $PATH
-  124  echo $JAVA_HOME
-    echo $PATH
-  141  echo $JAVA_HOME
-  142  exit
-  143  pwd
-  144  echo $JAVA_HOME
+  pwd -> Present work direcotry
+  sudo su-
+  cd ~  ->go to root
+  clear -> clear screen
+  ls -la -> print all bash profile file
+  file $(which java) -> check java location
+  /etc/alternatives/java -> copy this
+  file /etc/alternatives/java -> give exact java location and copty that.
+  sudo nano .batch_profile or vi .bash_profile -> to edit the file
+  press Esc and :wq -> to save changes in file.
+  echo $PATH
+  echo $JAVA_HOME
+  echo $PATH
+  echo $JAVA_HOME
+  exit
+  sudo su -
+  echo $JAVA_HOME
 
   
