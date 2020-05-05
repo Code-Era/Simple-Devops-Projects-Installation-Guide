@@ -1,0 +1,44 @@
+# Steps to set JAVA enviroment variable on Amazon Linux in 4 simple steps.
+
+
+### Steps 
+1. Check & install correct JAVA version
+   - java --version
+   - sudo yum list | grep openjdk -> for jdk 
+   - sudo yum install java-1.8.0-openjdk.x86_64. -> For install jdk.
+   
+2. Find Actual location Java
+  -$ file $(which java)
+    /usr/bin/java: symbolic link to `/etc/alternatives/java'
+  - copy `/etc/alternatives/java' path 
+  - $ file /etc/alternatives/java
+  - You will get path ->/usr/lib/jvm/jdk-1.8.0-openjdk.x86_64/bin
+    
+    
+## Set JAVA environment variable 
+1. Open .bash_profile file and set JAVA_HOME=/usr/lib/jvm/jdk-1.8.0-openjdk.x86_64/bin 
+2. check with echo $JAVA_HOME
+
+
+ 
+### Command 
+   ```sh
+  1. pwd -> Present work direcotry
+   2. sudo su-
+   cd ~  ->go to root
+  118  clear -> clear screen
+  120  ls -la -> print all bash profile file
+       file $(which java) -> check java location
+  130  /etc/alternatives/java -> copy this
+  135  file /etc/alternatives/java -> give exact java location and copty that.
+  121  sudo nano .batch_profile or vi .bash_profile -> to edit the file
+  122  press Esc and :wq -> to save changes in file.
+  123  echo $PATH
+  124  echo $JAVA_HOME
+    echo $PATH
+  141  echo $JAVA_HOME
+  142  exit
+  143  pwd
+  144  echo $JAVA_HOME
+
+    ```
