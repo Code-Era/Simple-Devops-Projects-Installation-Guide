@@ -65,3 +65,33 @@ docker rm <container_id>
 ```sh
 docker exec -it <container_Name> /bin/bash
 ```
+
+13. Latest tomcat image -
+   usually default apps are available in "webapps" folder. But for fix this you have to login in docker container 
+   and copy with the help of below commands-:
+```sh
+docker exec -it <container_Name> /bin/bash- login by this command
+
+[dockeradmin ~]$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
+c85b1e583515        devops-project      "catalina.sh run"   5 minutes ago       Up 5 minutes        0.0.0.0:8080->8080/tcp   devops-container
+[dockeradmin]$ docker exec -it devops-container /bin/bash
+root@c:/usr/local/tomcat# ls
+BUILDING.txt     LICENSE  README.md      RUNNING.txt  conf     lib   native-jni-lib  webapps       work
+CONTRIBUTING.md  NOTICE   RELEASE-NOTES  bin          include  logs  temp            webapps.dist
+root@:/usr/local/tomcat# cd webapps
+root@:/usr/local/tomcat/webapps# ls
+root@:/usr/local/tomcat/webapps# cd ..
+root@:/usr/local/tomcat# cd webapps.dist
+root@:/usr/local/tomcat/webapps.dist# ls
+ROOT  docs  examples  host-manager  manager
+root@:/usr/local/tomcat/webapps.dist# cp -R * ../webapps
+root@:/usr/local/tomcat/webapps.dist# cd ..
+root@:/usr/local/tomcat# ls
+BUILDING.txt     LICENSE  README.md      RUNNING.txt  conf     lib   native-jni-lib  webapps       work
+CONTRIBUTING.md  NOTICE   RELEASE-NOTES  bin          include  logs  temp            webapps.dist
+root@:/usr/local/tomcat# cd webapps
+root@:/usr/local/tomcat/webapps# ls
+ROOT  docs  examples  host-manager  manager
+root@:/usr/local/tomcat/webapps#
+```
